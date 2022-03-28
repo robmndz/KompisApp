@@ -8,7 +8,7 @@ public class HelloWorldController {
 
     @RequestMapping("/")
     public String index() {
-        return "Välkommen till min kompis agenda";
+        return "Välkommen till kompis agenda";
     }
 
 }
