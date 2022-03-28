@@ -28,7 +28,7 @@ public class KompisController {
     }
 
 
-    //för att posta från kommandoraden: curl localhost:8080/demo/add -d namn=Roberto -d telefonnummer=46546465
+    // https://kompis-agenda-app.herokuapp.com/demo/add?namn=Peter%20Hansel&telefonnummer=075324197
     @PostMapping( "/add") // Map ONLY POST Requests
     public String addNewKompisByPost(@RequestParam String namn,
                                      @RequestParam String telefonnummer) {
@@ -39,6 +39,7 @@ public class KompisController {
         return "Saved";
     }
 
+    // https://kompis-agenda-app.herokuapp.com/demo/all
     @GetMapping("/all")
     public Iterable<Kompis> getAllKompis() {
             // This returns a JSON or XML with the books
@@ -46,6 +47,7 @@ public class KompisController {
 
     }
 
+    // https://kompis-agenda-app.herokuapp.com/demo/kompis?namn=Emily%20Brown
     @GetMapping("/kompis")
     public Iterable<Kompis> getKompisByNamn(@RequestParam(required = false) String namn,
                                             @RequestParam(required = false) String telefonnummer) {
