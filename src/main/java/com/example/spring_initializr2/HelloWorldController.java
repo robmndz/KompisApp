@@ -1,5 +1,6 @@
 package com.example.spring_initializr2;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,4 +33,17 @@ public class HelloWorldController {
 
         return ("Hello " + firstName + " " + lastName);
     }
+
+    // http://localhost:8080/pathVariable/5
+    @RequestMapping("/pathVariable/{id}")
+    public String pathVariableTest(@PathVariable String id) {
+        return "ID: " + id;
+    }
+
+
+    @RequestMapping("/helloHTML")
+    public String helloHTML(@RequestParam String firstname, @RequestParam String lastname) {
+        return "<h1>Hejsan " + firstname + " " + lastname + "</h1>";
+    }
+
 }
