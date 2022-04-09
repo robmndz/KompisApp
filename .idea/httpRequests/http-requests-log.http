@@ -6,6 +6,30 @@ Content-Type: application/json
   "telefonnummer": "564554645"
 }
 
+<> 2022-04-09T145309.400.json
+
+###
+
+POST http://localhost:8080/demo/add
+Content-Type: application/json
+
+{
+  "namn": "Bilal",
+  "telefonnummer": "564554645"
+}
+
+<> 2022-04-09T145108.400.json
+
+###
+
+POST http://localhost:8080/demo/add
+Content-Type: application/json
+
+{
+  "namn": "Bilal",
+  "telefonnummer": "564554645"
+}
+
 <> 2022-04-09T141055.400.json
 
 ###

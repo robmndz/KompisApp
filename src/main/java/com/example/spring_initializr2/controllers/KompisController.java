@@ -29,6 +29,8 @@ public class KompisController {
     }
 
 
+    // ANVÄNT INTE DET HÄR!!!
+    //för att posta från kommandoraden: curl localhost:8080/demo/add -d title=First -d author=SomeGuy
     // https://kompis-agenda-app.herokuapp.com/demo/add?namn=Peter%20Hansel&telefonnummer=075324197
     @PostMapping( "/add") // Map ONLY POST Requests
     public String addNewKompisByPost(@RequestParam String namn,
@@ -47,6 +49,14 @@ public class KompisController {
             return kompisRepository.findAll();
 
     }
+
+    // I created this one to be able to work with Postman
+    @PostMapping("/addKompis")
+    public String addKompis(@RequestBody Kompis k) {
+        kompisRepository.save(k);
+        return "Saved";
+    }
+
 
     // https://kompis-agenda-app.herokuapp.com/demo/kompis?namn=Emily%20Brown
     @GetMapping("/kompis")
