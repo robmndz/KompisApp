@@ -19,6 +19,7 @@ public class HelloWorldController {
         return List.of("Hello", "World");
     }
 
+    // http://localhost:8080/listHello?id=1&id=2&id=6&id=9
     @RequestMapping("/listHello")
     public String listHello(@RequestParam List<String> id) {
         return "IDs are " + id;
