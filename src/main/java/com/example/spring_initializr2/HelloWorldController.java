@@ -25,6 +25,7 @@ public class HelloWorldController {
         return "IDs are " + id;
     }
 
+    // http://localhost:8080/hello?firstName=Roberto&lastName=M%C3%A9ndez
     @RequestMapping("/hello")
     public String index(@RequestParam String firstName,
                         @RequestParam String lastName) {
