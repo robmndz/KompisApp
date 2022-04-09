@@ -1,0 +1,54 @@
+POST http://localhost:8080/demo/add
+Content-Type: application/json
+
+{
+  "namn": "Bilal",
+  "telefonnummer": "564554645"
+}
+
+<> 2022-04-09T141055.400.json
+
+###
+
+POST http://localhost:8080/demo/add
+Content-Type: application/json
+
+{
+  "namn": "Bilal",
+  "adress": "Lisabon",
+  "telefonnummer": "564554645"
+}
+
+<> 2022-04-09T141020.400.json
+
+###
+
+POST http://localhost:8080/demo/add
+Content-Type: application/json
+
+{
+  "namn": "Bilal",
+  "adress": "Lisabon",
+  "telefonnummer": "564554645"
+}
+
+<> 2022-04-09T140939.400.json
+
+###
+
+GET http://localhost:8080/demo/delete/6
+
+<> 2022-03-28T140940.200.txt
+
+###
+
+GET http://localhost:8080/demo/delete/{{6}}
+
+###
+
+GET http://localhost:8080/demo/add?namn=Roberto Méndez&telefonnummer=07221158820
+
+<> 2022-03-28T135523.200.txt
+
+###
+
