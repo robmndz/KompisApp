@@ -28,19 +28,18 @@ public class KompisController {
         return "Saved";
     }
 
-
     // ANVÄNT INTE DET HÄR!!!
     //för att posta från kommandoraden: curl localhost:8080/demo/add -d title=First -d author=SomeGuy
     // https://kompis-agenda-app.herokuapp.com/demo/add?namn=Peter%20Hansel&telefonnummer=075324197
-    @PostMapping( "/add") // Map ONLY POST Requests
-    public String addNewKompisByPost(@RequestParam String namn,
-                                     @RequestParam String telefonnummer) {
-        // @RequestParam means it is a parameter from the GET or POST request
-
-        Kompis k = new Kompis(namn, telefonnummer);
-        kompisRepository.save(k);
-        return "Saved";
-    }
+//    @PostMapping( "/add") // Map ONLY POST Requests
+//    public String addNewKompisByPost(@RequestParam String namn,
+//                                     @RequestParam String telefonnummer) {
+//        // @RequestParam means it is a parameter from the GET or POST request
+//
+//        Kompis k = new Kompis(namn, telefonnummer);
+//        kompisRepository.save(k);
+//        return "Saved";
+//    }
 
     // https://kompis-agenda-app.herokuapp.com/demo/all
     @GetMapping("/all")
