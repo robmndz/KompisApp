@@ -50,6 +50,14 @@ public class KompisController {
 
     }
 
+    // I use this method to count the amount of kompis.
+    // count(); method is already in 'CrudRepository'. See 'Kompis Repository'.
+    // http://localhost:8080/demo/howMany
+    @GetMapping("/howMany")
+    public Long howMany() {
+        return kompisRepository.count();
+    }
+
     // I created this one to be able to work with Postman
     @PostMapping("/addKompis")
     public String addKompis(@RequestBody Kompis k) {
