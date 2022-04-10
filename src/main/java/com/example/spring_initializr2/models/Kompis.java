@@ -17,6 +17,7 @@ public class Kompis {
     private String namn;
     private String telefonnummer;
 
+    // 3 olika 'Constructors'. Inte aktuellt ändå eftersom vi använder 'Lombok'.
     public Kompis() {
     }
 
