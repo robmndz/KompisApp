@@ -41,6 +41,14 @@ public class KompisController {
 //        return "Saved";
 //    }
 
+    // Add kompis with @PostMapping
+    // I created this one to be able to work with Postman
+    @PostMapping("/addKompis")
+    public String addKompis(@RequestBody Kompis k) {
+        kompisRepository.save(k);
+        return "Saved";
+    }
+
     // https://kompis-agenda-app.herokuapp.com/demo/all
     @GetMapping("/all")
     public Iterable<Kompis> getAllKompis() {
@@ -61,14 +69,6 @@ public class KompisController {
     public String howMany() {
         return "Number of friends on the list: " + kompisRepository.count();
     }
-
-    // I created this one to be able to work with Postman
-    @PostMapping("/addKompis")
-    public String addKompis(@RequestBody Kompis k) {
-        kompisRepository.save(k);
-        return "Saved";
-    }
-
 
     // https://kompis-agenda-app.herokuapp.com/demo/kompis?namn=Emily%20Brown
     @GetMapping("/kompis")
