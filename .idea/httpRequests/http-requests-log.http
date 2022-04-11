@@ -1,3 +1,27 @@
+POST http://localhost:8080/demo/addKompis
+Content-Type: application/json
+
+{
+  "namn": "Bilal Farad",
+  "telefonnummer": "564554645"
+}
+
+<> 2022-04-11T102013.200.txt
+
+###
+
+POST http://localhost:8080/demo/addKompis
+Content-Type: application/json
+
+{
+  "namn": "Bilal",
+  "telefonnummer": "564554645"
+}
+
+<> 2022-04-11T101629.200.txt
+
+###
+
 POST http://localhost:8080/demo/add
 Content-Type: application/json
 

@@ -91,4 +91,17 @@ public class KompisController {
         return "Kompis was deleted";
     }
 
+    @GetMapping("/addOrUpdate")
+    public String addOrUpdateNewKompis(@RequestParam String namn,
+                                       @RequestParam String telefonnummer,
+                                       @RequestParam (required = false) Long id) {
+        Kompis k = new Kompis();
+        k.setNamn(namn);
+        k.setTelefonnummer(telefonnummer);
+        if (id != null) {
+            k.setId(id);
+        }
+        kompisRepository.save(k);
+        return "Saved";
+    }
 }
